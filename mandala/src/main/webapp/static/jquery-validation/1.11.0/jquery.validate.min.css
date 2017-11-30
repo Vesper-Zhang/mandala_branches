@@ -1,0 +1,10 @@
+label.error{
+	position: absolute;
+    bottom: -18px;
+    left: 0px;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    color: #f00;
+    font-weight: normal;
+}
