@@ -1,6 +1,7 @@
 package com.stone.mandala.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -22,7 +23,7 @@ public class LoginController {
 	@Resource
 	private IUserService userService;
 	
-	@RequestMapping("/judge")
+	/*@RequestMapping("/judge")
 	public String judge(HttpServletRequest request, Model model) {
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
@@ -41,7 +42,7 @@ public class LoginController {
 		}else{
 			return "error/error";
 		}
-	}
+	}*/
 	
 	@RequestMapping("/ajaxJudge")
 	@ResponseBody
@@ -74,7 +75,9 @@ public class LoginController {
 	}
 	
 	@RequestMapping("/loginSuccess")
-	public String login(HttpServletRequest request) {
+	public String login(HttpServletRequest request, Model model) {
+		List<User> userList = this.userService.getList();
+		model.addAttribute("userList", userList);
 		return "user/userList";
 	}
 }

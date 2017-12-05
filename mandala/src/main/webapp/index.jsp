@@ -38,6 +38,7 @@
             }
         });
   	}
+  	
 </script>
 
 </head>
@@ -55,7 +56,7 @@
 				<td>
 				    <!-- <input type="submit" value="登录" style="background-color: pink"> --> 
 				    <input type="button" value="登录" onclick="toSubmit()" style="background-color: pink"> 
-					<input type="reset" onclick="" value="重置" style="background-color: red">
+					<input type="reset" value="重置" onclick="" style="background-color: red">
 			    </td>
 			</tr>
 		</table>
