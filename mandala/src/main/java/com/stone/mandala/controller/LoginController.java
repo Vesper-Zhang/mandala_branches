@@ -23,7 +23,7 @@ public class LoginController {
 	@Resource
 	private IUserService userService;
 	
-	/*@RequestMapping("/judge")
+	@RequestMapping("/judge")
 	public String judge(HttpServletRequest request, Model model) {
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
@@ -42,12 +42,12 @@ public class LoginController {
 		}else{
 			return "error/error";
 		}
-	}*/
+	}
 	
 	@RequestMapping("/ajaxJudge")
 	@ResponseBody
 	public String ajaxJudge(HttpServletRequest request, Model model) {
-		Map<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> map = new HashMap<>();
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
 		//判断用户名密码是否正确
